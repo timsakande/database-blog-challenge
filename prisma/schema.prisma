@@ -7,8 +7,8 @@ generator client {
 
 datasource db {
   provider          = "postgresql"
-  url               = env("https://www.prisma.io/docs/orm/prisma-schema/overview")
-  shadowDatabaseUrl = env("https://www.prisma.io/docs/orm/prisma-schema/overview")
+  url               = env(postgresql://blog_owner:ZtmOEIzsa23p@ep-lingering-queen-a54h1djp.us-east-2.aws.neon.tech/blog?sslmode=require)
+  shadowDatabaseUrl = env(postgresql://blog_owner:ZtmOEIzsa23p@ep-lingering-queen-a54h1djp.us-east-2.aws.neon.tech/blog?sslmode=require)
 }
 
 model User {
