@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect x="50" y="50" width="200" height="200" fill="lightblue" stroke="black" />
+  <text x="150" y="80" text-anchor="middle" font-weight="bold">User</text>
+  <text x="60" y="110">id: Int (PK)</text>
+  <text x="60" y="130">username: String (unique)</text>
+  <text x="60" y="150">email: String (unique)</text>
+  <text x="60" y="170">createdAt: DateTime</text>
+  <text x="60" y="190">updatedAt: DateTime</text>
+
+  <rect x="300" y="50" width="200" height="200" fill="lightgreen" stroke="black" />
+  <text x="400" y="80" text-anchor="middle" font-weight="bold">Profile</text>
+  <text x="310" y="110">id: Int (PK)</text>
+  <text x="310" y="130">userId: Int (FK)</text>
+  <text x="310" y="150">profilePicture: String</text>
+  <text x="310" y="170">biography: String</text>
+  <text x="310" y="190">createdAt: DateTime</text>
+  <text x="310" y="210">updatedAt: DateTime</text>
+
+  <rect x="50" y="300" width="200" height="220" fill="lightyellow" stroke="black" />
+  <text x="150" y="330" text-anchor="middle" font-weight="bold">Post</text>
+  <text x="60" y="360">id: Int (PK)</text>
+  <text x="60" y="380">userId: Int (FK)</text>
+  <text x="60" y="400">title: String</text>
+  <text x="60" y="420">content: String</text>
+  <text x="60" y="440">published: Boolean</text>
+  <text x="60" y="460">pictureUrl: String?</text>
+  <text x="60" y="480">createdAt: DateTime</text>
+  <text x="60" y="500">updatedAt: DateTime</text>
+
+  <rect x="300" y="300" width="200" height="200" fill="lightpink" stroke="black" />
+  <text x="400" y="330" text-anchor="middle" font-weight="bold">Comment</text>
+  <text x="310" y="360">id: Int (PK)</text>
+  <text x="310" y="380">postId: Int (FK)</text>
+  <text x="310" y="400">userId: Int (FK)</text>
+  <text x="310" y="420">content: String</text>
+  <text x="310" y="440">createdAt: DateTime</text>
+  <text x="310" y="460">updatedAt: DateTime</text>
+
+  <!-- Relationships -->
+  <line x1="250" y1="150" x2="300" y2="150" stroke="black" />
+  <text x="275" y="140" text-anchor="middle">1</text>
+  <text x="275" y="170" text-anchor="middle">1</text>
+
+  <line x1="150" y1="250" x2="150" y2="300" stroke="black" />
+  <text x="140" y="275" text-anchor="middle">1</text>
+  <text x="170" y="275" text-anchor="middle">*</text>
+
+  <line x1="250" y1="400" x2="300" y2="400" stroke="black" />
+  <text x="275" y="390" text-anchor="middle">1</text>
+  <text x="275" y="420" text-anchor="middle">*</text>
+
+  <line x1="200" y1="250" x2="350" y2="300" stroke="black" />
+  <text x="270" y="270" text-anchor="middle">1</text>
+  <text x="320" y="290" text-anchor="middle">*</text>
+</svg>
